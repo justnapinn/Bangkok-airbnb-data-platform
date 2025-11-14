@@ -1,0 +1,10 @@
+CREATE TABLE public.fact_calendar (
+    listing_id BIGINT REFERENCES public.dim_listings(listing_id), 
+    calendar_date DATE,
+    is_available BOOLEAN,
+    price DECIMAL(10, 2),
+    adjusted_price DECIMAL(10, 2),
+    minimum_nights_on_date INT,
+    maximum_nights_on_date INT,
+    PRIMARY KEY (listing_id, calendar_date) 
+);

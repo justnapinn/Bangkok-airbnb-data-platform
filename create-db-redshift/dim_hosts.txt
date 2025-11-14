@@ -1,0 +1,12 @@
+CREATE TABLE public.dim_hosts (
+    host_id BIGINT PRIMARY KEY,
+    host_name VARCHAR(255),
+    host_since_date DATE,
+    host_location VARCHAR(500),
+    host_response_time VARCHAR(50),
+    host_response_rate DECIMAL(5, 2),
+    host_acceptance_rate DECIMAL(5, 2),
+    is_superhost BOOLEAN,
+    host_listings_count INT,
+    is_identity_verified BOOLEAN
+);
